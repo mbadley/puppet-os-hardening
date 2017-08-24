@@ -1,9 +1,5 @@
 # Puppet OS hardening
 
-[![Puppet Forge](https://img.shields.io/puppetforge/dt/hardening/os_hardening.svg)][1]
-[![Build Status](http://img.shields.io/travis/hardening-io/puppet-os-hardening.svg)][2]
-[![Gitter Chat](https://badges.gitter.im/Join%20Chat.svg)][3]
-
 ## Description
 
 This Puppet module provides secure configuration of your base OS with hardening.
@@ -95,65 +91,9 @@ After adding this module, you can use the class:
 
     class { 'os_hardening': }
 
-## Local Testing
-
-For local testing you can use vagrant and Virtualbox of VMWare to run tests locally. You will have to install Virtualbox and Vagrant on your system. See [Vagrant Downloads](http://downloads.vagrantup.com/) for a vagrant package suitable for your system. For all our tests we use `test-kitchen`. If you are not familiar with `test-kitchen` please have a look at [their guide](http://kitchen.ci/docs/getting-started).
-
-Next install test-kitchen:
-
-```bash
-# Install dependencies
-gem install bundler
-bundle install
-
-# Fetch tests
-bundle exec thor kitchen:fetch-remote-tests
-
-# Do lint checks
-bundle exec rake lint
-
-# Do spec checks
-bundle exec rake spec
-
-# fast test on one machine
-bundle exec kitchen test default-ubuntu-1204
-
-# test on Debian-based machines
-bundle exec kitchen test
-
-# for development
-bundle exec kitchen create default-ubuntu-1204
-bundle exec kitchen converge default-ubuntu-1204
-```
-
-For more information see [test-kitchen](http://kitchen.ci/docs/getting-started)
-
-## Contributors + Kudos
-
-* Dominik Richter [arlimus](https://github.com/arlimus)
-* Edmund Haselwanter [ehaselwanter](https://github.com/ehaselwanter)
-* Christoph Hartmann [chris-rock](https://github.com/chris-rock)
-* Thomas Dütsch [a-tom](https://github.com/a-tom)
-* Patrick Meier [atomic111](https://github.com/atomic111)
-* Artem Sidorenko [artem-sidorenko](https://github.com/artem-sidorenko)
-* Kurt Huwig [kurthuwig](https://github.com/kurthuwig)
-* Matthew Haughton [3flex](https://github.com/3flex)
-* Reik Keutterling [spielkind](https://github.com/spielkind)
-* Daniel Dreier [danieldreier](https://github.com/danieldreier)
-* Timo Goebel [timogoebel](https://github.com/timogoebel)
-* Tristan Helmich [fadenb](https://github.com/fadenb)
-
-For the original port of `chef-os-hardening` to puppet:
-
-* Artem Sidorenko [artem-sidorenko](https://github.com/artem-sidorenko)
-* Frank Kloeker [eumel8](https://github.com/eumel8)
-
-Thank you all!!
-
 ## License and Author
 
-* Author:: Dominik Richter <dominik.richter@gmail.com>
-* Author:: Deutsche Telekom AG
+* Author:: Malcolm Badley <malcbadley@gmail.com>
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -166,7 +106,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-[1]: https://forge.puppetlabs.com/hardening/os_hardening
-[2]: http://travis-ci.org/hardening-io/puppet-os-hardening
-[3]: https://gitter.im/hardening-io/general
